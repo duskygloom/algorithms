@@ -70,8 +70,6 @@ Graph *get_graph()
 
 void dfs_visit(Vertex *root, List *stack)
 {
-	list_append(stack, root);
-	root->color = BLACK;
 	Node *node = root->adjacent->head;
 	while (node) {
 		Vertex *curr = node->value;
@@ -81,6 +79,8 @@ void dfs_visit(Vertex *root, List *stack)
 		}
 		node = node->next;
 	}
+	list_append(stack, root);
+	root->color = BLACK;
 }
 
 void dfs_print(Graph *graph, Vertex *root)
