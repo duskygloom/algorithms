@@ -1,0 +1,28 @@
+$ make
+mkdir -p build
+gcc main.c -o build/main.o -c -g
+gcc heap.c -o build/heap.o -c -g
+gcc build/main.o build/heap.o -o app -g
+$ ./app
+K: 3
+
+Length of array: 20
+20 elements: 12 34 3 546 24 234 235 56 67 78 89 78 78 89 8 99 7 867 75 6
+
+BEFORE HEAPIFY
+12
+34 3 546
+24 234 235 56 67 78 89 78 78
+89 8 99 7 867 75 6
+
+MIN HEAP
+0
+0 3 78
+8 7 6 56 67 78 89 546 78
+89 24 99 234 867 75 12
+
+MAX HEAP
+867
+235 78 546
+99 234 34 56 67 3 89 78 78
+89 24 8 0 7 75 12
