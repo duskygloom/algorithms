@@ -1,0 +1,31 @@
+$ make
+mkdir -p build
+gcc list.c -o build/list.o -c -Wall -g
+gcc vertex.c -o build/vertex.o -c -Wall -g
+gcc graph.c -o build/graph.o -c -Wall -g
+gcc dfs.c -o build/dfs.o -c -Wall -g
+gcc build/list.o build/vertex.o build/graph.o build/dfs.o -o app -Wall -g
+$ ./app
+BEFORE:
+S -> [Z, W]
+T -> [V, U]
+U -> [T, V]
+V -> [S, W]
+W -> [X]
+X -> [Z]
+Y -> [X]
+Z -> [Y, W]
+
+(S(Z(Y(XX)Y)(WW)Z)S)(T(VV)(UU)T)
+DFS: [X, Y, W, Z, S, V, U, T]
+
+AFTER:
+S
+... Z
+... ... Y
+... ... ... X
+... ... W
+
+T
+... V
+... U

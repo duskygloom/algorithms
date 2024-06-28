@@ -1,0 +1,40 @@
+$ make
+mkdir -p build
+gcc list.c -o build/list.o -c -Wall -g
+gcc vertex.c -o build/vertex.o -c -Wall -g
+gcc graph.c -o build/graph.o -c -Wall -g
+gcc bfs.c -o build/bfs.o -c -Wall -g
+gcc build/list.o build/vertex.o build/graph.o build/bfs.o -o app -Wall -g
+$ ./app
+BEFORE:
+R -> [S, T, W]
+S -> [R, U, V]
+T -> [R, U]
+U -> [S, T, Y]
+V -> [S, W, Y]
+W -> [R, V, X, Z]
+X -> [W, Y, Z]
+Y -> [U, V, X]
+Z -> [W, X]
+
+[S]
+[R, U, V]
+[U, V, T, W]
+[V, T, W, Y]
+[T, W, Y]
+[W, Y]
+[Y, X, Z]
+[X, Z]
+[Z]
+BFS traversal: [S, R, U, V, T, W, Y, X, Z]
+
+AFTER:
+S
+... R
+... ... T
+... ... W
+... ... ... X
+... ... ... Z
+... U
+... ... Y
+... V

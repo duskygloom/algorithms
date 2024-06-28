@@ -1,0 +1,281 @@
+$ make
+mkdir -p build
+gcc binary_tree.c -o build/binary_tree.o -Wall -g -c
+gcc bst.c -o build/bst.o -Wall -g -c
+gcc main.c -o build/main.o -Wall -g -c
+gcc build/binary_tree.o build/bst.o build/main.o -o app -Wall -g
+$ ./app
+
+1. Create.
+2. Delete.
+3. Insert.
+4. Remove.
+5. Search.
+6. Print.
+0. Quit.
+Option: 1
+Created a tree.
+
+1. Create.
+2. Delete.
+3. Insert.
+4. Remove.
+5. Search.
+6. Print.
+0. Quit.
+Option: 3
+Value: 10
+Inserted 10.
+
+1. Create.
+2. Delete.
+3. Insert.
+4. Remove.
+5. Search.
+6. Print.
+0. Quit.
+Option: 3
+Value: 2
+Inserted 2.
+
+1. Create.
+2. Delete.
+3. Insert.
+4. Remove.
+5. Search.
+6. Print.
+0. Quit.
+Option: 3
+Value: 4
+Inserted 4.
+
+1. Create.
+2. Delete.
+3. Insert.
+4. Remove.
+5. Search.
+6. Print.
+0. Quit.
+Option: 3
+Value: 6
+Inserted 6.
+
+1. Create.
+2. Delete.
+3. Insert.
+4. Remove.
+5. Search.
+6. Print.
+0. Quit.
+Option: 3
+Value: 1
+Inserted 1.
+
+1. Create.
+2. Delete.
+3. Insert.
+4. Remove.
+5. Search.
+6. Print.
+0. Quit.
+Option: 3
+Value: 14
+Inserted 14.
+
+1. Create.
+2. Delete.
+3. Insert.
+4. Remove.
+5. Search.
+6. Print.
+0. Quit.
+Option: 3
+Value: 13
+Inserted 13.
+
+1. Create.
+2. Delete.
+3. Insert.
+4. Remove.
+5. Search.
+6. Print.
+0. Quit.
+Option: 3
+Value: 20
+Inserted 20.
+
+1. Create.
+2. Delete.
+3. Insert.
+4. Remove.
+5. Search.
+6. Print.
+0. Quit.
+Option: 6
+10
+... 2
+... ... 1
+... ... ... 1
+... ... 4
+... ... ... 6
+... 14
+... ... 13
+... ... 20
+
+1. Create.
+2. Delete.
+3. Insert.
+4. Remove.
+5. Search.
+6. Print.
+0. Quit.
+Option: 6
+10
+... 2
+... ... 1
+... ... 4
+... ... ... 6
+... 14
+... ... 13
+... ... 20
+
+1. Create.
+2. Delete.
+3. Insert.
+4. Remove.
+5. Search.
+6. Print.
+0. Quit.
+Option: 4
+Node address: 6
+Tree does not contain 0x6.
+
+1. Create.
+2. Delete.
+3. Insert.
+4. Remove.
+5. Search.
+6. Print.
+0. Quit.
+Option: 5
+Value: 6
+Found at 0x568a1043eb70.
+
+1. Create.
+2. Delete.
+3. Insert.
+4. Remove.
+5. Search.
+6. Print.
+0. Quit.
+Option: 4
+Node address: 0x568a1043eb70
+Removed 6.
+
+1. Create.
+2. Delete.
+3. Insert.
+4. Remove.
+5. Search.
+6. Print.
+0. Quit.
+Option: 6
+10
+... 2
+... ... 1
+... ... 4
+... 14
+... ... 13
+... ... 20
+
+1. Create.
+2. Delete.
+3. Insert.
+4. Remove.
+5. Search.
+6. Print.
+0. Quit.
+Option: 5
+Value: 10
+Found at 0x568a1043eae0.
+
+1. Create.
+2. Delete.
+3. Insert.
+4. Remove.
+5. Search.
+6. Print.
+0. Quit.
+Option: 4
+Node address: 0x568a1043eae0
+Removed 10.
+
+1. Create.
+2. Delete.
+3. Insert.
+4. Remove.
+5. Search.
+6. Print.
+0. Quit.
+Option: 6
+13
+... 2
+... ... 1
+... ... 4
+... 14
+... ... 20
+
+1. Create.
+2. Delete.
+3. Insert.
+4. Remove.
+5. Search.
+6. Print.
+0. Quit.
+Option: 5
+Value: 14
+Found at 0x568a1043ec00.
+
+1. Create.
+2. Delete.
+3. Insert.
+4. Remove.
+5. Search.
+6. Print.
+0. Quit.
+Option: 4
+Node address: 0x568a1043ec00
+Removed 14.
+
+1. Create.
+2. Delete.
+3. Insert.
+4. Remove.
+5. Search.
+6. Print.
+0. Quit.
+Option: 6
+13
+... 2
+... ... 1
+... ... 4
+... 20
+
+1. Create.
+2. Delete.
+3. Insert.
+4. Remove.
+5. Search.
+6. Print.
+0. Quit.
+Option: 2
+Deleted the tree.
+
+1. Create.
+2. Delete.
+3. Insert.
+4. Remove.
+5. Search.
+6. Print.
+0. Quit.
+Option: 0

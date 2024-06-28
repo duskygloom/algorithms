@@ -3,52 +3,39 @@
 #include <stdio.h>
 
 
-void iterative_multiplication(Matrix *r, const Matrix *a, const Matrix *b);
 void recursive_multiplication(Matrix *r, const Matrix *a, const Matrix *b, 
                               int rx, int ry, int ax, int ay, int bx, int by, int length);
 
 int main()
 {
-    int row, col;
-    printf("Rows, columns: ");
-    scanf("%d %d", &row, &col);
+    int row1, col1, col2;
 
-    Matrix *a = create_sqmatrix(row, col);
-    Matrix *b = create_sqmatrix(row, col);
-    Matrix *r_iter = create_sqmatrix(row, col);
-    Matrix *r_recur = create_sqmatrix(row, col);
-
+    printf("Rows of first matrix: ");
+    scanf("%d", &row1);
+    printf("Columns of first matrix: ");
+    scanf("%d", &col1);
+    Matrix *a = create_sqmatrix(row1, col1);
     printf("Matrix A:\n");
     fill_matrix(a);
+
+    printf("Columns of second matrix: ");
+    scanf("%d", &col2);
+    Matrix *b = create_sqmatrix(col1, col2);
     printf("Matrix B:\n");
     fill_matrix(b);
 
-    printf("Iterative multiplication:\n");
-    iterative_multiplication(r_iter, a, b);
-    print_matrix(r_iter);
+    Matrix *r_recur = create_sqmatrix(row1, col2);
 
     printf("Recursive multiplication:\n");
     recursive_multiplication(r_recur, a, b, 0, 0, 0, 0, 0, 0, get_sqmatrix_length(r_recur));
     print_matrix(r_recur);
 
     delete_sqmatrix(r_recur);
-    delete_sqmatrix(r_iter);
     delete_sqmatrix(b);
     delete_sqmatrix(a);
     return 0;
 }
 
-
-void iterative_multiplication(Matrix *r, const Matrix *a, const Matrix *b)
-{
-    for (int i = 0; i < r->rows; ++i)
-        for (int j = 0; j < r->cols; ++j)
-            for (int k = 0; k < a->cols; ++k) {
-                int value = get_value(r, i, j);
-                value += get_value(a, i, k)*get_value(b, k, j);
-                set_value(r, i, j, value);
-            }
-}
 
 /**
  * @note

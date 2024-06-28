@@ -1,0 +1,6 @@
+$ gcc radix_sort.c
+$ ./a.out
+Length: 6
+Elements: 56 32 21 4 23 6
+
+Sorted array: [4, 6, 21, 23, 32, 56]

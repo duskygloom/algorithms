@@ -1,0 +1,23 @@
+$ make
+mkdir -p build
+gcc list.c -o build/list.o -Wall -g -c
+gcc bucket_sort.c -o build/bucket_sort.o -Wall -g -c
+gcc build/list.o build/bucket_sort.o -o app -Wall -g
+$ ./app
+Length: 10
+Elements: 12 11 20 16 15 18 18 20 13 17
+
+Before sort: [12, 11, 13]
+After sort: [11, 12, 13]
+
+Before sort: [15]
+After sort: [15]
+
+Before sort: [16, 18, 18, 17]
+After sort: [16, 17, 18, 18]
+
+Before sort: [20, 20]
+After sort: [20, 20]
+
+
+Sorted array: [11, 12, 13, 15, 16, 17, 18, 18, 20, 20]

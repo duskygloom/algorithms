@@ -1,0 +1,16 @@
+$ make
+mkdir -p build
+gcc matrix.c -o build/matrix.o -c -Wall -g
+gcc matrix_subtraction.c -o build/matrix_subtraction.o -c -Wall -g
+gcc build/matrix.o build/matrix_subtraction.o -o app -Wall -g
+$ ./app
+Rows, columns: 2 3
+Matrix A:
+-12 34 5
+4 6 7
+Matrix B:
+1 2 3
+4 6 6
+Iterative subtraction:
+-13  32   2
+  0   0   1

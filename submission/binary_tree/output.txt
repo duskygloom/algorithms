@@ -1,0 +1,17 @@
+$ make
+mkdir -p build
+gcc binary_tree.c -o build/binary_tree.o -Wall -g -c
+gcc main.c -o build/main.o -Wall -g -c
+gcc build/binary_tree.o build/main.o -o app -Wall -g
+$ ./app
+Tree:
+        12
+       /  \
+     16   10
+    /  \    \
+   4   9    21
+  / \
+ 0  20
+Inorder: [0, 4, 20, 16, 9, 12, 10, 21]
+Preorder: [12, 16, 4, 0, 20, 9, 10, 21]
+Postorder: [0, 20, 4, 9, 16, 21, 10, 12]

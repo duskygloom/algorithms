@@ -1,0 +1,6 @@
+$ gcc selection_sort.c
+$ ./a.out
+Length: 6
+Elements: 56 -34 46 6 78 0
+
+Sorted array: [-34, 0, 6, 46, 56, 78]

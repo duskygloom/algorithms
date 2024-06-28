@@ -100,12 +100,13 @@ void print_matrix(const Matrix *matrix)
 {
 	assert(matrix && matrix->array2d);
 	// find maximum number of digits
-	int max_number = matrix->array2d[0][0];
+	int max_digits = 1;
 	for (int i = 0; i < matrix->rows; ++i)
-		for (int j = 0; j < matrix->cols; ++j)
-			if (matrix->array2d[i][j] > max_number)
-				max_number = matrix->array2d[i][j];
-	int max_digits = get_digits(max_number);
+		for (int j = 0; j < matrix->cols; ++j) {
+			int digits = get_digits(matrix->array2d[i][j]);
+			if (digits > max_digits)
+				max_digits = digits;
+		}
 	// print with padding
 	for (int i = 0; i < matrix->rows; ++i) {
 		for (int j = 0; j < matrix->cols; ++j)

@@ -86,28 +86,28 @@ void _print_preorder(const Node *root, bool first_node)
 {
 	if (!root) return;
 	printf("%d, ", root->value);
-	_print_preorder(root->left);
-	_print_preorder(root->right);
+	_print_preorder(root->left, false);
+	_print_preorder(root->right, false);
 }
 
 void print_preorder(const Tree *tree)
 {
 	putchar('[');
-	_print_preorder(tree->root);
+	_print_preorder(tree->root, true);
 	putchar(']');
 }
 
 void _print_postorder(const Node *root, bool first_node)
 {
 	if (!root) return;
-	_print_postorder(root->left);
-	_print_postorder(root->right);
+	_print_postorder(root->left, false);
+	_print_postorder(root->right, false);
 	printf("%d, ", root->value);
 }
 
 void print_postorder(const Tree *tree)
 {
 	putchar('[');
-	_print_postorder(tree->root);
+	_print_postorder(tree->root, true);
 	putchar(']');
 }

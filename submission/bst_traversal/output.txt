@@ -1,0 +1,11 @@
+$ make
+mkdir -p build
+gcc binary_tree.c -o build/binary_tree.o -Wall -g -c
+gcc main.c -o build/main.o -Wall -g -c
+gcc build/binary_tree.o build/bst.o build/main.o -o app -Wall -g
+$ ./app
+Length of array: 7
+Elements: 12 34 4 21 5 6 8
+Inorder: [4, 5, 6, 8, 12, 21, 34]
+Preorder: [12, 4, 5, 6, 8, 34, 21]
+Postorder: [8, 6, 5, 4, 21, 34, 12]
