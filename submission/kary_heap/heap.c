@@ -38,7 +38,7 @@ void print_heap(Heap *heap)
  * returns the index of the node it has been replaced with
  * if not replaced, returns -1
  */
-void replace_with_children(Heap *heap, int parent, heap_t heaptype)
+void replace_with_children(Heap *heap, int parent, heap_type_t heaptype)
 {
     // returns if no children
     if (LEFT_MOST_CHILD(parent, heap->k) >= heap->length)
@@ -62,7 +62,7 @@ void replace_with_children(Heap *heap, int parent, heap_t heaptype)
     }
 }
 
-void heapify(Heap *heap, heap_t heaptype)
+void heapify(Heap *heap, heap_type_t heaptype)
 {
     /**
      * @note

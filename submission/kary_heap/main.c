@@ -42,6 +42,7 @@ int main()
     fill_array(array, length);
     // create heap
     Heap *heap = create_heap(k, array, length);
+    free(array);
     printf("\nBEFORE HEAPIFY\n");
     print_heap(heap);
     // min heap
