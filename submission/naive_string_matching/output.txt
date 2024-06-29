@@ -1,0 +1,6 @@
+$ gcc string_matching.c
+$ ./a.out
+String (200): naive string search algorithm
+Match (20): arch
+arch found at 15.
+In passage: arch
