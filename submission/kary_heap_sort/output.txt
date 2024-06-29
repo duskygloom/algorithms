@@ -1,0 +1,13 @@
+$ make
+mkdir -p build
+gcc heap_sort.c -o build/heap_sort.o -c -g
+gcc heap.c -o build/heap.o -c -g
+gcc build/heap_sort.o build/heap.o -o app -g
+$ ./app
+K: 3
+
+Length of array: 20
+20 elements: 12 34 3 546 24 234 235 56 67 78 89 78 78 89 8 99 7 867 75 6
+
+Ascending: [3, 6, 7, 8, 12, 24, 34, 56, 67, 75, 78, 78, 78, 89, 89, 99, 234, 235, 546, 867]
+Descending: [867, 546, 235, 234, 99, 89, 89, 78, 78, 78, 75, 67, 56, 34, 24, 12, 8, 7, 6, 3]
