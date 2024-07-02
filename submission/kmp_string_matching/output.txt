@@ -1,0 +1,13 @@
+$ vim ./string_matching.c
+$ gcc ./string_matching.c
+$ ./a.out
+Text (1000): bacbababaabcbab
+Substring (100): aab
+Prefix array: [0, 1, 0]
+aab found at 8.
+In passage: aab
+sarka: kmp_string_matching % .\a.exe
+Text (1000): bacbababaabcbab
+Substring (100): ababaca
+Prefix array: [0, 0, 1, 2, 3, 0, 1]
+ababaca not found.
