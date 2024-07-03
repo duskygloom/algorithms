@@ -1,0 +1,13 @@
+$ gcc matrix_chain_multiplication.c
+$ ./a.out
+Number of matrices: 5
+6 dimensions: 10 3 6 8 5 9
+
+Number of operations: 669
+
+Lookup matrix
+   0  180  660 1060  864
+   0  144  264  399    0
+   0  240  510    0    0
+   0  360    0    0    0
+   0    0    0    0    0
